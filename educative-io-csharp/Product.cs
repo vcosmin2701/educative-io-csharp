@@ -26,5 +26,10 @@ namespace educative_io_csharp
 			Console.WriteLine("Expiry Date: " + this._expiryDate);
 		}
 
+		public void RandomMessage()
+		{
+			Console.WriteLine("product class");
+		}
+
 	}
 }

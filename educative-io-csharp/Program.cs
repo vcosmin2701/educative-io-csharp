@@ -5,5 +5,7 @@ class Program
 	{
 		Beverage cola = new Beverage("RC Cola", 0.7, "8/12/2019", 0.35, "Cola");
 		cola.BeverageDetails();
+		cola.Display();
+		
 	}
 }

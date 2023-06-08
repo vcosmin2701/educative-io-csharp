@@ -24,5 +24,16 @@ namespace educative_io_csharp
 			Console.WriteLine("Litres: " + this._litres);
 			Console.WriteLine("Flavor: " + this._flavor);
 		}
+
+		new public void RandomMessage()
+		{
+			Console.WriteLine("beverage class");
+		}
+
+		public void Display()
+		{
+			base.RandomMessage();
+			RandomMessage();
+		}
 	}
 }

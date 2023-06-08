@@ -3,14 +3,10 @@ class Program
 {
 	public static void Main(string[] args)
 	{
-		VendingMachine vend1 = new VendingMachine(true, 50, 10);
-		VendingMachine vend2 = new VendingMachine(true, 5);
-		VendingMachine vend3 = new VendingMachine();
-		Console.WriteLine("----------------------");
-		vend1.PrintFields();
-		Console.WriteLine("----------------------");
-		vend2.PrintFields();
-		Console.WriteLine("----------------------");
-		vend3.PrintFields();
+		MoneyCollector collector = new MoneyCollector();
+		collector.AddMoney(3);
+		collector.AddMoney(5);
+		collector.AddMoney(7);
+		Console.WriteLine($"Total collection till now is: {collector.GetMoneyCollected()}");
 	}
 }

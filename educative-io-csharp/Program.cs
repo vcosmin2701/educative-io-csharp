@@ -3,9 +3,15 @@ class Program
 {
 	public static void Main(string[] args)
 	{
-		Beverage cola = new Beverage("RC Cola", 0.7, "8/12/2019", 0.35, "Cola");
-		cola.BeverageDetails();
-		cola.Display();
-		
+		Product[] products = new Product[4];
+		products[0] = new Beverage("Pepsi", 9);
+		products[1] = new Chocolate("Kandia", 15);
+		products[2] = new Chocolate("Milka", 20);
+		products[3] = new Beverage("Dorna", 8);
+
+		foreach(Product product in products)
+		{
+			product.PrintDetails();
+		}
 	}
 }

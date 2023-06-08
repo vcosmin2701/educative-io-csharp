@@ -1,34 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace educative_io_csharp
+﻿namespace educative_io_csharp
 {
 	class Product
 	{
 		private string _name;
-		private double _price;
-		private string _expiryDate;
+		private double _purchasePrice;
 
-		public Product(string name, double price, string expiryDate)
+
+		public Product(string name, double purchasePrice)
 		{
 			this._name = name;
-			this._price = price;
-			this._expiryDate = expiryDate;
+			this._purchasePrice = purchasePrice;
 		}
 
-		public void PrintDetails()
+		public double GetPurchasePrice()
 		{
-			Console.WriteLine("Name: " + this._name);
-			Console.WriteLine("Price: " + this._price);
-			Console.WriteLine("Expiry Date: " + this._expiryDate);
+			return this._purchasePrice;
 		}
 
-		public void RandomMessage()
+		public virtual double GetPrice()
 		{
-			Console.WriteLine("product class");
+			return 0;
+		}
+
+		public virtual void PrintDetails()
+		{
+			Console.WriteLine($"Selected Product's name: {this._name}");
 		}
 
 	}
